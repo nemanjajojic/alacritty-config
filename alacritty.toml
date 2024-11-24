@@ -1,10 +1,11 @@
-import = [
+general.import = [
   "~/.config/alacritty/themes/catppuccin-mocha.toml"
 ]
 
 [window]
 padding.x = 5
 padding.y = 5
+option_as_alt = "Both"
 
 decorations = "Buttonless"
 
@@ -18,3 +19,13 @@ size = 14
 [env]
 TERM = "xterm-256color"
 
+[selection]
+save_to_clipboard = true
+
+[keyboard]
+bindings = [
+     { key = "Enter", mods = "Command", action = "ToggleFullscreen"},
+    { key = "D",  mods = "Command", chars = "\u0002%" },
+    # ⌘ + ⇧ + d adds a pane below (splits window horizontally)
+    { key = "D",  mods = "Command|Shift", chars = "\u0002\"" },
+]
